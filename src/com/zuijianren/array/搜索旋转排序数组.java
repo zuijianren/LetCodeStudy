@@ -1,5 +1,7 @@
 package com.zuijianren.array;
 
+import org.junit.Test;
+
 /**
  *
  假设按照升序排序的数组在预先未知的某个点上进行了旋转。
@@ -18,7 +20,7 @@ package com.zuijianren.array;
  输出: 4
  */
 public class 搜索旋转排序数组 {
-    public static int search(int[] nums, int target) {
+    public int search(int[] nums, int target) {
         //排除空数组
         if(nums.length == 0){
             return -1;
@@ -60,7 +62,8 @@ public class 搜索旋转排序数组 {
         }
     }
 
-    public static void main(String[] args) {
+    @Test
+    public void test(String[] args) {
         int[] nums = new int[]{4,5,6,7,0,1,2};
         int target = 0;
         int search = search(nums, target);
